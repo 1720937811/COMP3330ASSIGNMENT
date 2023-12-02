@@ -44,10 +44,10 @@ class MainActivity : AppCompatActivity() {
             val builder = AlertDialog.Builder(this)
             var message = ""
             top3Results.forEachIndexed { i, category ->
-                message += "${i + 1}. ${category.label} with a score of ${category.score}\n"
+                message += "${i + 1}. ${category.label} (Score: ${category.score})\n"
             }
             builder
-                .setTitle("Received results from model")
+                .setTitle("Top 3 results from the ML model")
                 .setMessage(message.trim())
                 .setNeutralButton("OK!") { dialogInterface: DialogInterface, i: Int ->
 
